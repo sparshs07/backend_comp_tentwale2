@@ -36,13 +36,7 @@ public class AppListenerImpl implements ServletContextListener{
         System.out.println("=========TENTWALE STARTING!========");        
         System.out.println("===================================");        
         
-        System.out.println("---------------Membership------------------");
-        ArrayList<Membership>memberships=Membership.collectMemberships();
-        context.setAttribute("memberships", memberships);
-
-        System.out.println("---------------Status------------------");
-        ArrayList<Status>status=Status.collectStatus();
-        context.setAttribute("status", status);
+       
 
         String[] models = { "Invoice", "InvoiceItem", "Item", "Membership", "Status", "TentwalaItem", "User", "Wishlist" };
 
@@ -65,6 +59,14 @@ public class AppListenerImpl implements ServletContextListener{
                 ex.printStackTrace();
             }
         }
+
+        System.out.println("---------------Membership------------------");
+        ArrayList<Membership>memberships=Membership.collectMemberships();
+        context.setAttribute("memberships", memberships);
+
+        System.out.println("---------------Status------------------");
+        ArrayList<Status>status=Status.collectStatus();
+        context.setAttribute("status", status);
 
         System.out.println("=====================");
         System.out.println("==========CONFIGURING DATABASE ===========");

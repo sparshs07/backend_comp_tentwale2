@@ -27,11 +27,13 @@ public class SignupServlet extends HttpServlet {
         HttpSession session=request.getSession();
         ServletContext context=getServletContext();
         // ###########################ADDING CAPTCHA###########################
-        String responseToken=request.getParameter("g-recaptcha-response");
-        String recaptchaURL=context.getInitParameter("recaptcha_url");
-        String secret_key=context.getInitParameter("secret_key");
+        // String responseToken=request.getParameter("g-recaptcha-response");
+        // String recaptchaURL=context.getInitParameter("recaptcha_url");
+        // String secret_key=context.getInitParameter("secret_key");
         
-        boolean flag=AppUtility.checkGoogleRecaptchaResponse(recaptchaURL,secret_key,responseToken);
+        // boolean flag=AppUtility.checkGoogleRecaptchaResponse(recaptchaURL,secret_key,responseToken);
+        //just removing recaptcha to add again remove below line
+        boolean flag=true;
         String nextPage="error.jsp";
         if(flag){
             String name=request.getParameter("name");
