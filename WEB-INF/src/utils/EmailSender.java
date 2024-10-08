@@ -15,7 +15,7 @@ public class EmailSender {
 
     static{
         properties.put("mail.transport.protocol","smtp");
-        properties.put("mail.smtp.host","smtp-mail.outlook.com");
+        properties.put("mail.smtp.host","smtp.zoho.in");
         properties.put("mail.smtp.port","587");
         properties.put("mail.smtp.auth","true");
         properties.put("mail.smtp.starttls.enable","true");
@@ -26,7 +26,7 @@ public class EmailSender {
         Session session=Session.getInstance(properties,new EmailAuthenticator());
         MimeMessage mm=new MimeMessage(session);
         try{
-            mm.setFrom("sparshshrivastava2307@outlook.com");
+            mm.setFrom("sparshs@zohomail.in");
             mm.setRecipients(Message.RecipientType.TO, toEmail);
             mm.setSubject(subject);
             mm.setContent(message,"text/html");
@@ -54,6 +54,6 @@ public class EmailSender {
 
 class EmailAuthenticator extends Authenticator{
     public PasswordAuthentication getPasswordAuthentication(){
-        return new PasswordAuthentication("sparshshrivastava2307@outlook.com","SS23072002ss");
+        return new PasswordAuthentication("sparshs@zohomail.in","S23072002s");
     }
 }
