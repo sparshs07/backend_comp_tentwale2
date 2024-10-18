@@ -121,7 +121,7 @@
     confirm_signout_btn.addEventListener('click',()=>{
       signoutSession().then((data)=>{
         if(data=='true'){
-          window.open('http://localhost:8080/tentwale/signin.jsp','_self')
+          window.open('http://localhost:8080/backend_comp_tentwale2/signin.jsp','_self')
         }
       }).catch((error)=>{
         console.log(error)

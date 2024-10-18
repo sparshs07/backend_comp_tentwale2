@@ -46,7 +46,7 @@ public class EmailSender {
 
     public static boolean resetEmail(String email){
         String subject="Reset Password Email";
-        String message="<h1>Welcome to Tentwale</h1>"+"<br><br><p>Use this link to reset your password!!<p><b>"+"<a href='http://localhost:8080/tentwale/reset_password.do?email="+email+"'>Navigate throught this link</a></b>";
+        String message="<h1>Welcome to Tentwale</h1>"+"<br><br><p>Use this link to reset your password!!<p><b>"+"<a href='http://localhost:8080/backend_comp_tentwale2/reset_password.do?email="+email+"'>Navigate throught this link</a></b>";
         boolean f=sendEmail(email,subject,message);
         return f;
     }
